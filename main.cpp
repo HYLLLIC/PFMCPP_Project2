@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int           //integer
+ float         //floating point
+ bool          //boolean
+ double        //double precision floating point
+ char          //character
+ unsigned int  //unsigned integer
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    int x = 1;
+    int y = 2;
+    int z = 3;
+
+    float snickers = 2.19f;
+    float bottleWater = 1.99f;
+    float gatorade = 2.87f;
+
+    bool isSweaty = true;
+    bool lightsOn = false;
+    bool amTired = true;
+
+    double favoriteNumbers = 3.737373737373;
+    double scoreCard = 9.99;
+    double upDown = 12345.54321;
+
+    char dimension = 'X';
+    char lastLetter = 'Z';
+    char kanisSays = 'A';
+
+    unsigned int hells = 9;
+    unsigned int streetLights = 4;
+    unsigned int banjo = 5;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, x, y, z, snickers, bottleWater, gatorade, isSweaty, lightsOn, amTired, favoriteNumbers, scoreCard, upDown, dimension, lastLetter, kanisSays, hells, streetLights, banjo); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +104,92 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+float throwHammer(double hammerWeight, double power)
+{
+    ignoreUnused(hammerWeight, power);
+    return {};
+}
 
 /*
  2)
  */
+bool isStuck(bool canMove = false, bool canSee = false, bool canHear = false)
+{
+    ignoreUnused(canMove, canSee, canHear);
+    return {};
+}
 
 /*
  3)
  */
+int yourChange(double cost, double paid, int dollars = 0, int quarters = 0, int dimes = 0)
+{
+    ignoreUnused(cost, paid, dollars, quarters, dimes);
+    return {};
+}
 
 /*
  4)
  */
+float explode(double temp, double pressure, bool fracture = false)
+{
+    ignoreUnused(temp, pressure, fracture);
+    return {};
+}
 
 /*
  5)
  */
+char letterGrade(int totalPoints, int possiblePoints, bool wasLate = false)
+{
+    ignoreUnused(totalPoints, possiblePoints, wasLate);
+    return {};
+}
 
 /*
  6)
  */
+unsigned int elevatorLight(int floor, bool doorsClosed, char inspectorGrade)
+{
+    ignoreUnused(floor, doorsClosed, inspectorGrade);
+    return {};
+}
 
 /*
  7)
  */
+unsigned int liftWeights(int weight, int reps, bool wearHeadphones = false)
+{
+    ignoreUnused(weight, reps, wearHeadphones);
+    return {};
+}
 
 /*
  8)
  */
+double getAudited(bool isSame, double income, double deductions, float taxRate = 10.0f)
+{
+    ignoreUnused(isSame, income, deductions, taxRate);
+    return {};
+}
 
 /*
  9)
  */
+int spinWheel(bool coinInserted = false, char buttonSelect = 'a', double pullLever = 2.2)
+{
+    ignoreUnused(coinInserted, buttonSelect, pullLever);
+    return {};
+}
 
 /*
  10)
  */
+float laughter(unsigned int funny, unsigned int numDrinks)
+{
+    ignoreUnused(funny, numDrinks);
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +211,36 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto hammerThrowDist = throwHammer(2.5, 4.2);
     
     //2)
+    auto checkOne = isStuck(true, true, true);
     
     //3)
+    auto change = yourChange(2.50, 4.00, 1, 0, 0);
     
     //4)
+    auto blownUp = explode(100.0, 1.0, true);
     
     //5)
+    auto myGrade = letterGrade(100, 100, false);
     
     //6)
+    auto buttonPushed = elevatorLight(3, true, 'A');
     
     //7)
+    auto workout = liftWeights(100, 10, true);
     
     //8)
+    auto filingStatus = getAudited(true, 20000.0, 5000.0, 20.0f);
     
     //9)
+    auto spinOne = spinWheel(true, 'b', 4.4);
     
     //10)
+    auto loudness = laughter(5, 10);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, hammerThrowDist, checkOne, change, blownUp, myGrade, buttonPushed, workout, filingStatus, spinOne, loudness);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
