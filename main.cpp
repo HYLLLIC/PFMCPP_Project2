@@ -122,7 +122,7 @@ bool isStuck(bool canMove = false, bool canSee = false, bool canHear = false)
 /*
  3)
  */
-int yourChange(double cost, double paid, int dollars = 0, int quarters = 0, int dimes = 0)
+int getYourChange(double cost, double paid, int dollars = 0, int quarters = 0, int dimes = 0)
 {
     ignoreUnused(cost, paid, dollars, quarters, dimes);
     return {};
@@ -140,7 +140,7 @@ float explode(double temp, double pressure, bool fracture = false)
 /*
  5)
  */
-char letterGrade(int totalPoints, int possiblePoints, bool wasLate = false)
+char calculateGrade(int totalPoints, int possiblePoints, bool wasLate = false)
 {
     ignoreUnused(totalPoints, possiblePoints, wasLate);
     return {};
@@ -149,7 +149,7 @@ char letterGrade(int totalPoints, int possiblePoints, bool wasLate = false)
 /*
  6)
  */
-unsigned int elevatorLight(int floor, bool doorsClosed, char inspectorGrade)
+unsigned int displayElevatorLight(int floor, bool doorsClosed, char inspectorGrade)
 {
     ignoreUnused(floor, doorsClosed, inspectorGrade);
     return {};
@@ -185,7 +185,7 @@ int spinWheel(bool coinInserted = false, char buttonSelect = 'a', double pullLev
 /*
  10)
  */
-float laughter(unsigned int funny, unsigned int numDrinks)
+float measureLaughter(unsigned int funny, unsigned int numDrinks)
 {
     ignoreUnused(funny, numDrinks);
     return {};
@@ -217,16 +217,16 @@ int main()
     auto checkOne = isStuck(true, true, true);
     
     //3)
-    auto change = yourChange(2.50, 4.00, 1, 0, 0);
+    auto change = getYourChange(2.50, 4.00, 1, 0, 0);
     
     //4)
     auto blownUp = explode(200.0, 5.0, true);
     
     //5)
-    auto myGrade = letterGrade(93, 100, false);
+    auto myGrade = calculateGrade(93, 100, false);
     
     //6)
-    auto buttonPushed = elevatorLight(6, true, 'A');
+    auto buttonPushed = displayElevatorLight(6, true, 'A');
     
     //7)
     auto workout = liftWeights(100, 10, true);
@@ -238,7 +238,7 @@ int main()
     auto spinOne = spinWheel(true, 'b', 4.4);
     
     //10)
-    auto loudness = laughter(2, 3);
+    auto loudness = measureLaughter(2, 3);
     
     ignoreUnused(carRented, hammerThrowDist, checkOne, change, blownUp, myGrade, buttonPushed, workout, filingStatus, spinOne, loudness);
     std::cout << "good to go!" << std::endl;
