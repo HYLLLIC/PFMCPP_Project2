@@ -211,7 +211,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto hammerThrowDist = throwHammer(2.5, 4.2);
+    auto hammerThrowDist = throwHammer(4.5, 1.2);
     
     //2)
     auto checkOne = isStuck(true, true, true);
@@ -220,13 +220,13 @@ int main()
     auto change = yourChange(2.50, 4.00, 1, 0, 0);
     
     //4)
-    auto blownUp = explode(100.0, 1.0, true);
+    auto blownUp = explode(200.0, 5.0, true);
     
     //5)
-    auto myGrade = letterGrade(100, 100, false);
+    auto myGrade = letterGrade(93, 100, false);
     
     //6)
-    auto buttonPushed = elevatorLight(3, true, 'A');
+    auto buttonPushed = elevatorLight(6, true, 'A');
     
     //7)
     auto workout = liftWeights(100, 10, true);
@@ -238,7 +238,7 @@ int main()
     auto spinOne = spinWheel(true, 'b', 4.4);
     
     //10)
-    auto loudness = laughter(5, 10);
+    auto loudness = laughter(2, 3);
     
     ignoreUnused(carRented, hammerThrowDist, checkOne, change, blownUp, myGrade, buttonPushed, workout, filingStatus, spinOne, loudness);
     std::cout << "good to go!" << std::endl;
